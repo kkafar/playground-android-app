@@ -6,10 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.kkafara.bare.databinding.FragmentLoginBinding
 
 
 class LoginFragment : Fragment() {
   val TAG: String = LoginFragment::class.java.simpleName;
+
+  private lateinit var binding: FragmentLoginBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     Log.i(TAG, "onCreate")
@@ -21,7 +24,13 @@ class LoginFragment : Fragment() {
     savedInstanceState: Bundle?
   ): View? {
     Log.i(TAG, "onCreateView")
-    return inflater.inflate(R.layout.fragment_login, container, false)
+    binding = FragmentLoginBinding.inflate(inflater, container, false)
+    return binding.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    Log.i(TAG, "onViewCreated")
+    super.onViewCreated(view, savedInstanceState)
   }
 
 //  companion object {
