@@ -9,22 +9,25 @@
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="409dp"
             android:layout_height="426dp"
-            android:id="@+id/fragment_container_view"
+            android:id="@+id/nav_host_fragment_container"
+            android:name="com.kkafara.bare.NavigationFragment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
             android:layout_marginTop="120dp" />
 
-    <TextView
-            android:text="@string/main_activity_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/activity_main_text_view"
-            android:layout_marginTop="84dp"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_container_view"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="145dp"
-            android:layout_marginEnd="146dp"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <!--    <TextView-->
+<!--            android:text="@string/main_activity_layout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/activity_main_text_view"-->
+<!--            android:layout_marginTop="84dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/fragment_container_view"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:layout_marginStart="145dp"-->
+<!--            android:layout_marginEnd="146dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

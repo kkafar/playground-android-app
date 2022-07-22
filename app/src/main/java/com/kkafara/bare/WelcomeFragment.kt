@@ -42,7 +42,7 @@ class WelcomeFragment : Fragment() {
       Log.d(TAG, "Navigation button clicked")
       parentFragmentManager.commit {
         setReorderingAllowed(true)
-        replace<LoginFragment>(R.id.fragment_container_view)
+        replace<LoginFragment>(R.id.nav_host_fragment_container)
       }
     }
   }
