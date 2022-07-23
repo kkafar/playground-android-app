@@ -22,9 +22,6 @@ class MainActivity : AppCompatActivity() {
     binding = ActivityMainBinding.inflate(layoutInflater)
     mainLayoutTextView = binding.activityMainTextView
 
-    Log.i(TAG, "${binding.fragmentContainerView.id}")
-    Log.i(TAG, "${R.id.fragment_container_view}")
-
     if (savedInstanceState == null) {
       Log.d(TAG, "Creating Welcome fragment instance with FragmentTransaction")
       supportFragmentManager.commit {
